@@ -22,6 +22,23 @@ input:focus {
     box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
 }
 
+/* Ajuste dos ícones dentro dos labels */
+label i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo dos ícones nos campos de entrada */
+.input-group label i {
+    color: #4caf50; /* Cor dos ícones */
+    font-size: 18px; /* Tamanho dos ícones */
+    vertical-align: middle; /* Centraliza o ícone verticalmente com o texto */
+}
+
+/* Estilo ao focar no input, mantendo o ícone na mesma linha */
+.input-group input:focus + label i {
+    color: #388e3c; /* Muda a cor do ícone quando o input está focado */
+}
+
 .btn {
     background-color: #4caf50;
     color: white;
