@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
     <link rel="stylesheet" href="register.css">
+    <script src="https://kit.fontawesome.com/29dd473d90.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="form-wrapper">
@@ -12,19 +13,19 @@
             <h2>Cadastro</h2>
             <form id="registerForm">
                 <div class="input-group">
-                    <label for="name">Nome Completo</label>
+                    <label for="name"><i class="fas fa-user"></i> Nome Completo</label>
                     <input type="text" id="name" placeholder="Digite seu nome completo" required />
                 </div>
                 <div class="input-group">
-                    <label for="email">Email</label>
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
                     <input type="email" id="email" placeholder="Digite seu email" required />
                 </div>
                 <div class="input-group">
-                    <label for="password">Senha</label>
+                    <label for="password"><i class="fas fa-lock"></i> Senha</label>
                     <input type="password" id="password" placeholder="Digite sua senha" required />
                 </div>
                 <div class="input-group">
-                    <label for="type">Tipo</label>
+                    <label for="type"><i class="fas fa-user-tag"></i> Tipo</label>
                     <select id="type" required>
                         <option value="PROFESSOR">Professor</option>
                         <option value="COORDENADOR">Coordenador</option>
@@ -38,7 +39,6 @@
             <p>Já tem uma conta? <a href="login.html">Login</a></p>
         </div>
     </div>
-
     <script src="register.js"></script>
 </body>
 </html>
