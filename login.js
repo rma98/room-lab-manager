@@ -1,33 +1,42 @@
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Impede o envio do formulário
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const formData = {
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+    };
 
-    const credentials = { email: email, password: password };
-
-    // Faz a requisição para o backend
-    fetch("http://localhost:8080/api/login", {
-        method: "POST",
+    fetch('http://localhost:8080/api/usuarios/login', {
+        method: 'POST',
         headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify(credentials),
+        body: JSON.stringify({
+            email: formData.email,
+            senha: formData.password
+        })
     })
     .then(response => {
         if (response.ok) {
-            return response.text();  // Pode receber a mensagem do servidor
-        } else {
-            throw new Error('Falha na autenticação');
+            // Lida com respostas de texto simples
+            return response.text(); 
         }
+        throw new Error('Falha no login');
     })
-    .then(message => {
-        console.log(message);
-        // Redirecionar para o dashboard ou página inicial
-        window.location.href = "/index.html";
+    .then(data => {
+        const messageElement = document.getElementById('message');
+        if (messageElement) {
+            messageElement.innerHTML = `<div class="success">${data}</div>`;
+        }
+
+        setTimeout(() => {
+            window.location.href = 'index.html'; // Redireciona após 2 segundos
+        }, 2000);
     })
     .catch(error => {
-        document.getElementById('message').innerHTML = `<div class="error">${error.message}</div>`;
-        console.error("Erro:", error);
+        const messageElement = document.getElementById('message');
+        if (messageElement) {
+            messageElement.innerHTML = `<div class="error">${error.message}</div>`;
+        }
     });
 });
