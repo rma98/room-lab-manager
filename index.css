@@ -82,6 +82,37 @@ header h1 i {
   /* Cor dos ícones */
 }
 
+.icon {
+  margin-right: 10px; /* Espaçamento entre o ícone e a mensagem */
+  vertical-align: middle; /* Alinha verticalmente o ícone com o texto */
+}
+
+.welcome-message {
+background-color: #f9f9f9; /* Cor de fundo suave e neutra */
+border-left: 5px solid #007bff; /* Linha de destaque suave */
+padding: 15px; /* Espaçamento interno */
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+font-size: 1em; /* Tamanho da fonte mais sutil */
+color: #333; /* Cor do texto */
+border-radius: 5px; /* Bordas arredondadas mais sutis */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+margin-top: 15px; /* Espaçamento superior */
+transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+.welcome-message:hover {
+background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para mensagem de sucesso */
+.success {
+color: #4caf50; /* Verde mais suave para sucesso */
+}
+
+/* Estilos para mensagem de erro */
+.error {
+color: #f44336; /* Vermelho mais suave para erro */
+}
 
 /* Cards */
 .cards-section {
