@@ -21,6 +21,11 @@
       </div>
     </header>
 
+    <!-- Saudação de boas-vindas -->
+    <div id="welcomeMessage" class="welcome-message">
+      <i id="welcomeIcon" class="icon fas fa-lock"></i> Para acessar todas as funcionalidades, por favor, faça login.
+    </div>
+
     <!-- Sidebar -->
     <nav class="sidebar" id="sidebar">
       <ul>
@@ -29,11 +34,13 @@
         </li>
         <li><a href="#" onclick="handleMenuClick('viewLabs')"><i class="fas fa-flask"></i> Visualizar Laboratórios</a>
         </li>
+        <li id="loginMenu"><a href="login.html"><i class="fas fa-user-circle"></i> Login</a></li>
+        <li id="registerMenu"><a href="register.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
         <li id="logoutMenu" style="display:none;"><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i>
             Sair</a></li>
       </ul>
     </nav>
-
+    
     <!-- Main Content -->
     <main>
       <section class="cards-section">
@@ -71,6 +78,7 @@
     </div>
   </div>
   <script src="index.js"></script>
+  <script src="login.js"></script>
 </body>
 
 </html>
