@@ -90,5 +90,5 @@ function closePopup() {
 }
 
 function redirectTo(page) {
-  window.location.href = `/${page}.html`;
+  window.location.href = `/src/pages/${page}.html`;
 }
