@@ -53,9 +53,9 @@ function handleMenuClick(option) {
     }
     toggleSidebar();
   } else if (option === 'login') {
-    window.location.href = '/login.html'; // Redireciona para a página de login
+    window.location.href = '../../src/pages/login.html'; // Redireciona para a página de login
   } else if (option === 'register') {
-    window.location.href = '/register.html'; // Redireciona para a página de cadastro
+    window.location.href = '../../src/pages/register.html'; // Redireciona para a página de cadastro
   }
 }
 
@@ -78,7 +78,7 @@ function logout() {
   document.getElementById('logoutMenu').style.display = 'none';
   
   // Redireciona para a página de index após logout
-  window.location.href = '/index.html';
+  window.location.href = '../../src/pages/index.html';
 }
 
 function showPopup() {

@@ -35,7 +35,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
         // Redireciona após 2 segundos
         setTimeout(() => {
-            window.location.href = 'index.html';
+            window.location.href = '../../src/pages/index.html';
         }, 2000);
     })
     .catch(error => {
