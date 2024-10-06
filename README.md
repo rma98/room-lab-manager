@@ -3,6 +3,19 @@
 ## Descrição
 Este projeto é um sistema de gerenciamento de salas e laboratórios, desenvolvido utilizando HTML, CSS e JavaScript no front-end, com integração ao back-end em Spring Boot. O objetivo é proporcionar uma interface intuitiva para registro e login de usuários, além de visualização e gerenciamento de salas e laboratórios.
 
+## Estrutura do Projeto
+
+### frontend/
+- js/: Scripts para o front-end.
+- screenshots/: Capturas de tela da aplicação.
+- src/assets/: Arquivos CSS e SCSS para estilização.
+- pages/: Páginas HTML do projeto.
+
+### backend/
+- src/main/java/: Código-fonte do backend em Java.
+- src/main/resources/: Arquivos de configuração, como `application.properties`.
+- pom.xml: Dependências do projeto Maven.
+
 ## Funcionalidades
 - Registro de novos usuários
 - Login de usuários existentes
