@@ -11,16 +11,16 @@ Este projeto é um sistema de gerenciamento de salas e laboratórios, desenvolvi
 ## Capturas de Tela
 
 ### Página Inicial (index.html)
-![Página Inicial](././frontend/screenshots/index.png)
+![Página Inicial](./public/screenshots/index.png)
 
 ### Página de Login (login.html)
-![Página de Login](././frontend/screenshots/login.png)
+![Página de Login](./public/screenshots/login.png)
 
 ### Página de Registro (register.html)
-![Página de Registro](././frontend/screenshots/register.png)
+![Página de Registro](./public/screenshots/register.png)
 
 ### Página Inicial logada (index.html)
-![Página Inicial](././frontend/screenshots/home.png)
+![Página Inicial](./public/screenshots/home.png)
 
 ## Como Executar o Projeto
 
