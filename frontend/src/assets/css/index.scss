@@ -1,0 +1,226 @@
+// Variáveis
+$primary-color: #4caf50;
+$primary-color-dark: #388e3c;
+$background-color: #f9f9f9;
+$text-color: #333;
+$border-color: #ccc;
+$success-color: #4caf50;
+$error-color: #f44336;
+
+// Geral
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+}
+
+// Header
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: white;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+  }
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  height: 100%;
+  background-color: $primary-color-dark;
+  transition: right 0.3s;
+  z-index: 100;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+
+  &.active {
+    right: 0; // Quando ativa, move para a direita
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      padding: 15px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $primary-color; // Cor ao passar o mouse
+        }
+
+        i {
+          margin-right: 10px;
+          color: white; // Cor dos ícones
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  margin-right: 10px; // Espaçamento entre o ícone e a mensagem
+  vertical-align: middle; // Alinha verticalmente o ícone com o texto
+}
+
+.welcome-message {
+  background-color: $background-color; // Cor de fundo suave e neutra
+  border-left: 5px solid #007bff; // Linha de destaque suave
+  padding: 15px; // Espaçamento interno
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // Fonte mais moderna
+  font-size: 1em; // Tamanho da fonte mais sutil
+  color: $text-color; // Cor do texto
+  border-radius: 5px; // Bordas arredondadas mais sutis
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra leve
+  margin-top: 15px; // Espaçamento superior
+  transition: background-color 0.3s; // Transição suave para hover
+
+  &:hover {
+    background-color: #e9ecef; // Cor de fundo ao passar o mouse
+  }
+}
+
+// Estilos para mensagem de sucesso
+.success {
+  color: $success-color; // Verde mais suave para sucesso
+}
+
+// Estilos para mensagem de erro
+.error {
+  color: $error-color; // Vermelho mais suave para erro
+}
+
+// Cards
+.cards-section {
+  margin-left: 260px;
+  padding: 20px;
+
+  h2 {
+    color: #000;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card {
+      background-color: white;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      padding: 15px;
+      width: 30%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+
+      h3 {
+        margin: 0 0 10px;
+      }
+
+      .status {
+        font-weight: bold;
+
+        &.available {
+          color: $primary-color-dark;
+        }
+
+        &.unavailable {
+          color: $error-color;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: $primary-color;
+  color: white;
+  position: relative;
+  clear: both;
+}
+
+// Popup
+.popup {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .popup-content {
+    background-color: $primary-color-dark;
+    border-radius: 8px;
+    max-width: 400px;
+    padding: 15px 20px;
+    text-align: center;
+
+    .close {
+      color: white;
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+
+      button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $primary-color-dark;
+        }
+      }
+    }
+  }
+}
