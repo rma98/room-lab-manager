@@ -27,7 +27,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     .then(data => {
         document.getElementById('message').innerHTML = `<div class="success">Usuário cadastrado com sucesso!</div>`;
         setTimeout(() => {
-            window.location.href = 'login.html';
+            window.location.href = '../../src/pages/login.html';
         }, 2000);
     })
     .catch(error => {
