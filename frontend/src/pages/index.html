@@ -34,13 +34,20 @@
         </li>
         <li><a href="#" onclick="handleMenuClick('viewLabs')"><i class="fas fa-flask"></i> Visualizar Laboratórios</a>
         </li>
+
+        <!-- Opções que só aparecem para Coordenador -->
+        <li id="addRoomMenu"><a href="#" onclick="handleMenuClick('addRoom')"><i class="fas fa-plus"></i> Adicionar
+            Sala</a></li>
+        <li id="addLabMenu"><a href="#" onclick="handleMenuClick('addLab')"><i class="fas fa-plus"></i> Adicionar
+            Laboratório</a></li>
+
         <li id="loginMenu"><a href="login.html"><i class="fas fa-user-circle"></i> Login</a></li>
         <li id="registerMenu"><a href="register.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
         <li id="logoutMenu" style="display:none;"><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i>
             Sair</a></li>
       </ul>
     </nav>
-    
+
     <!-- Main Content -->
     <main>
       <section class="cards-section">
