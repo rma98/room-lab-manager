@@ -4,31 +4,42 @@ let isLoggedIn = false;
 document.addEventListener('DOMContentLoaded', () => {
   // Atualiza o ano atual no rodapé
   document.getElementById('currentYear').textContent = new Date().getFullYear();
-  
+
   // Verifica se o usuário está logado
   const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
   const userName = localStorage.getItem('userName');
   const userType = localStorage.getItem('userType');
 
   if (storedIsLoggedIn === 'true' && userName && userType) {
-    isLoggedIn = true;
     // Exibe a saudação personalizada
     const welcomeMessageElement = document.getElementById('welcomeMessage');
     if (welcomeMessageElement) {
       welcomeMessageElement.innerHTML = `Bem-vindo ${userType} ${userName}!`;
     }
 
-    // Exibe o menu de logout se o usuário estiver logado
+    // Exibe o menu de logout e oculta as opções de login e cadastro
     document.getElementById('logoutMenu').style.display = 'block';
-    // Esconde as opções de login e cadastro
     document.getElementById('loginMenu').style.display = 'none';
     document.getElementById('registerMenu').style.display = 'none';
+
+    // Lógica para exibir opções de coordenador
+    if (userType.toLowerCase() === 'coordenador') {
+      document.getElementById('addRoomMenu').style.display = 'block';
+      document.getElementById('addLabMenu').style.display = 'block';
+    } else {
+      // Se não for coordenador, oculte as opções
+      document.getElementById('addRoomMenu').style.display = 'none';
+      document.getElementById('addLabMenu').style.display = 'none';
+    }
   } else {
-    // Esconde o menu de logout se o usuário não estiver logado
+    // Se o usuário não estiver logado, esconda o menu de logout
     document.getElementById('logoutMenu').style.display = 'none';
-    // Exibe as opções de login e cadastro se o usuário não estiver logado
     document.getElementById('loginMenu').style.display = 'block';
     document.getElementById('registerMenu').style.display = 'block';
+
+    // Oculta as opções de adicionar sala e laboratório para usuários não logados
+    document.getElementById('addRoomMenu').style.display = 'none';
+    document.getElementById('addLabMenu').style.display = 'none';
   }
 });
 
